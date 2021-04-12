@@ -6,12 +6,7 @@ images = ('.jpeg', '.png', '.jpg', '.svg')
 documents = ('.doc', '.docx', '.txt', '.pdf', '.xlsx', '.pptx')
 music = ('.mp3', '.ogg', '.wav', '.amr')
 archives = ('.zip', '.gz', '.tar', '.rar')
-vid=[]
-mus=[]
-img=[]
-doc=[]
-arc=[]
-other=[]
+vid,mus,img,doc,arc,other = [],[],[],[],[],[]
 all_ext = video + images + documents + music + archives #Известные расширения
 
 
@@ -19,9 +14,7 @@ def searching_all_files(directory):
     dirpath = Path(directory)
     assert(dirpath.is_dir())
     global file_list, found_extentions, unknown_ext
-    found_extentions=[]
-    file_list = []
-    unknown_ext=[]
+    found_extentions,file_list,unknown_ext = [],[],[]
     for x in dirpath.iterdir():
         if x.is_file():
             file_list.append(x.name)
@@ -47,8 +40,8 @@ def searching_all_files(directory):
     return file_list, found_extentions, unknown_ext
 
 
-#searching_all_files('C:/Users/vlady/Desktop/Python/testfolder/')
-searching_all_files(sys.argv[1])
+searching_all_files('C:/Users/vlady/Desktop/Python/testfolder/')
+#searching_all_files(sys.argv[1])
 
 print("Videos: ")
 print(*vid, sep = ', ', end= '\n\n')
