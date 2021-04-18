@@ -12,7 +12,7 @@
 
 import re
 
-def transliterate(text):
+def normalize(text):
     dictionary = (u"абвгдеёжзийклмнопрстуфхцчшщъыьэюяїіґАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯЇІҐ",
            u"abvgdeejzijklmnoprstufhzcss_y_euaiigABVGDEEJZIJKLMNOPRSTUFHZCSS_Y_EUAIIG")
 
@@ -25,7 +25,7 @@ def transliterate(text):
     print(onlyalpha_latin)
     return onlyalpha_latin
 
-transliterate('''АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьъыэюя   1234567890   !"№;%:?*()_+!@#$%^&*()_+\/*-+./.,qwertyuiop[]asdfghjkl;'\zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:"|ZXCVBNM<>?''')
+#normalize('''АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьъыэюя   1234567890   !"№;%:?*()_+!@#$%^&*()_+\/*-+./.,qwertyuiop[]asdfghjkl;'\zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:"|ZXCVBNM<>?''')
 
 
 #Или можно написать более растянуто, но в этом случае удобнее изменять таблицу и более точно передать звук + дальнейшая доработка
@@ -67,7 +67,7 @@ Table={'А': 'A', 'а': 'a',
 'І': 'I', 'і': 'i',
 'Ґ': 'G', 'ґ': 'g'}
 
-def transliterate(text, translit_table=Table):
+def normalize(text, translit_table=Table):
     latin = ''
     for char in text:
         transchar = ''
@@ -82,4 +82,4 @@ def transliterate(text, translit_table=Table):
     print(type(latin))
     return latin
 
-transliterate('''АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьъыэюя   1234567890   !"№;%:?*()_+!@#$%^&*()_+\/*-+./.,qwertyuiop[]asdfghjkl;'\zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:"|ZXCVBNM<>?''')
+#normalize('''АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯабвгдеёжзийклмнопрстуфхцчшщьъыэюя   1234567890   !"№;%:?*()_+!@#$%^&*()_+\/*-+./.,qwertyuiop[]asdfghjkl;'\zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:"|ZXCVBNM<>?''')
