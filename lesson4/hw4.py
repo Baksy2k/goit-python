@@ -40,7 +40,7 @@ def searching_all_files(directory):
     return file_list, found_extentions, unknown_ext
 
 
-searching_all_files('C:/Users/vlady/Desktop/Python/testfolder/')
+searching_all_files('C:/Users/vlady/Desktop/testfolder/')
 #searching_all_files(sys.argv[1])
 
 print("Videos: ")
