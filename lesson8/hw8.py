@@ -2,18 +2,18 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 
 
-users = [{'name':'Jack', 'birthday':'01-05-90'},
-        {'name':'John', 'birthday':'29-07-90'},
-        {'name':'Ella', 'birthday':'30-07-90'},
-        {'name':'Fiji', 'birthday':'24-07-90'},
-        {'name':'Kate', 'birthday':'26-07-90'},
-        {'name':'Mike', 'birthday':'25-07-90'},
-        {'name':'Bill', 'birthday':'27-07-90'},
-        {'name':'Eve', 'birthday':'01-08-90'},
-        {'name':'Jane', 'birthday':'01-08-90'},
-        {'name':'Heather', 'birthday':'24-07-90'},
-        {'name':'Brandon', 'birthday':'28-07-90'},
-        {'name':'Bruce', 'birthday':'29-07-90'}]
+users = [{'name':'Bob', 'birthday':'01-08-90'},
+        {'name':'Rob', 'birthday':'29-07-90'},
+        {'name':'Tod', 'birthday':'30-07-90'},
+        {'name':'Cob', 'birthday':'24-07-90'},
+        {'name':'Guy', 'birthday':'26-07-90'},
+        {'name':'Dirk', 'birthday':'25-07-90'},
+        {'name':'Mark', 'birthday':'27-07-90'},
+        {'name':'Mike', 'birthday':'01-08-90'},
+        {'name':'Bill', 'birthday':'01-08-90'},
+        {'name':'Anna', 'birthday':'24-07-90'},
+        {'name':'Kate', 'birthday':'28-07-90'},
+        {'name':'Nate', 'birthday':'29-07-90'}]
 
 
 def congratulate(users):
